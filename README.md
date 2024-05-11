@@ -61,21 +61,32 @@ El otro ejemplo corresponde a un caso hipotético donde no conocemos la cantidad
 ## Compilación antes de enviar
 Durante el concurso, los equipos idealmente deberían testarse antes de enviárselo a los jueces. Para ello, deben compilar los archivos de código fuente tal y como lo harán los jueces. Para ello se deben ejecutar los siguientes comandos en la terminal de Ubuntu:
 
-* C++:
-`g++ -x c++ -g -O2 -static archivo.cpp`
+* **C++:**
+```
+g++ -x c++ -g -O2 -static archivo.cpp
+```
 *Nota: El archivo compilado se llamará a.out*
-* Java:
-`javac -encoding UTF-8 -sourcepath . -d . archivo.java`
-* Python:
-`pypy3 -m py_compile archivo.py`
+
+* **Java:**
+```
+javac -encoding UTF-8 -sourcepath . -d . archivo.java
+```
+
+* **Python:**
+```
+pypy3 -m py_compile archivo.py
+```
 *Nota: La compilación de archivos Python no es siempre necesaria, simplemente se puede ejecutar el código fuente directamente*
 
 ## Probar las soluciones con archivos de entrada (.in) de ejemplo
 Cuando se dispone de los archivos compilados, se pueden enviar archivos de entrada (.in) utilizando el redireccionamiento de entrada `<` en la terminal de Ubuntu:
 
-* C++:
+* **C++:**
+
 `$ ./nombre_archivo_compilado < entrada.in`
-* Python:
+
+* **Python:**
+
 `$ python archivo.py < entrada.in`
 
 ### Utilizando los archivos del repositorio
@@ -91,7 +102,9 @@ En esta carpeta encontrarás cinco archivos de C++, de los cuales cuatro se pued
 | suma4.cpp  | a.out  | datos_suma4.in  |
 
 Por lo tanto, para realizar las pruebas con los archivos de este repositorio se debe ejecutar:
-`$ ./a.out < ../datos_suma.in`
+```
+./a.out < ../datos_suma.in
+```
 
 #### Python
 En esta carpeta encontrarás cuatro archivos de Python, de los cuales todos se pueden utilizar para resolver el problema de ejemplo de este repositorio, así como utilizar los archivos de entrada. Para ello, utiliza la siguiente tabla:
@@ -103,21 +116,23 @@ En esta carpeta encontrarás cuatro archivos de Python, de los cuales todos se p
 | suma4.py  | datos_suma4.in  |
 
 Por lo tanto, para realizar las pruebas con los archivos de este repositorio se debe ejecutar:
-`$ python suma.py < ../datos_suma.in`
+```
+python suma.py < ../datos_suma.in
+```
 
 Si las pruebas realizadas resultaron con éxito, corresponde enviar las soluciones a la plataforma para ser evaluadas.
 
 ## Posibles resultados de la plataforma
 Un envío puede tener los siguientes resultados (es posible que no todos estén disponibles según la configuración del sistema):
-* CORRECT
+* **CORRECT**
 El envío pasó todas las pruebas: ¡Resolviste el problema! Los envíos correctos no incurren tiempo de penalización.
-* COMPILER-ERROR
+* **COMPILER-ERROR**
 Hubo un error al compilar tu programa. En la página de detalles del envío puedes inspeccionar el error exacto (esta opción puede estar deshabilitada). Ten en cuenta que cuando la compilación tarda más de 30 segundos se cancela y esto cuenta como un error de compilación. Los errores de compilación no incurren en tiempo de penalización.
-* TIMELIMIT
+* **TIMELIMIT**
 Tu programa tardó más que el tiempo máximo permitido para el problema. Esto podría indicar que tu programa se bloquea en un bucle o que tu solución no es suficientemente eficiente.
-* RUN-ERROR
+* **RUN-ERROR**
 Hubo un error durante la ejecución de tu programa. Esto puede tener muchas causas diferentes como división por cero, direccionamiento incorrecto de la memoria (por ejemplo, indexando matrices fuera de límites), intentar usar más memoria que el límite permitido, leer o escribir en archivos, etc. También verifique que tu programa finalice con el código de salida 0.
-* WRONG-ANSWER
+* **WRONG-ANSWER**
 El resultado de tu programa fue incorrecto. Esto puede suceder simplemente porque tu La solución no es correcta, pero recuerda que tu salida debe cumplir exactamente con las especificaciones solicitadas.
-* TOO LATE
+* **TOO LATE**
 Enviaste la solución después de que terminó el concurso. El envío se almacena, pero no será procesado.
