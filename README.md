@@ -85,6 +85,10 @@ Cuando se dispone de los archivos compilados, se pueden enviar archivos de entra
 
 `$ ./nombre_archivo_compilado < entrada.in`
 
+* **Java:**
+
+`$ java archivo.java < entrada.in`
+
 * **Python:**
 
 `$ python archivo.py < entrada.in`
@@ -131,8 +135,8 @@ Hubo un error al compilar tu programa. En la página de detalles del envío pued
 * **TIMELIMIT**
 Tu programa tardó más que el tiempo máximo permitido para el problema. Esto podría indicar que tu programa se bloquea en un bucle o que tu solución no es suficientemente eficiente.
 * **RUN-ERROR**
-Hubo un error durante la ejecución de tu programa. Esto puede tener muchas causas diferentes como división por cero, direccionamiento incorrecto de la memoria (por ejemplo, indexando matrices fuera de límites), intentar usar más memoria que el límite permitido, leer o escribir en archivos, etc. También verifique que tu programa finalice con el código de salida 0.
+Hubo un error durante la ejecución de tu programa. Esto puede tener muchas causas diferentes como división por cero, direccionamiento incorrecto de la memoria (por ejemplo, indexando matrices fuera de límites), intentar usar más memoria que el límite permitido, leer o escribir en archivos, etc. También verifica que tu programa finalice con el código de salida 0.
 * **WRONG-ANSWER**
-El resultado de tu programa fue incorrecto. Esto puede suceder simplemente porque tu La solución no es correcta, pero recuerda que tu salida debe cumplir exactamente con las especificaciones solicitadas.
+El resultado de tu programa fue incorrecto. Esto puede suceder simplemente porque la solución no es correcta, pero recuerda que tu salida debe cumplir exactamente con las especificaciones solicitadas, también recuerda que prueban con muchos datos de entrada y no solo con los ejemplos del enunciado.
 * **TOO LATE**
 Enviaste la solución después de que terminó el concurso. El envío se almacena, pero no será procesado.
